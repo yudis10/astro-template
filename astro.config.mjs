@@ -16,4 +16,11 @@ export default defineConfig({
     }),
     alpinejs(),
   ],
+  base: "/",
+  build: {
+    format: "file",
+    assets: "_astro",
+  },
+  output: "static",
+  outDir: "./preview",
 });
