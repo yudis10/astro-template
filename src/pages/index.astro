@@ -1,0 +1,40 @@
+---
+import { Image } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout pageTitle="Index">
+  <div class="container">
+    <h1 class="text-2xl font-bold text-indigo-500">Astro</h1>
+    <Image
+      src="https://via.placeholder.com/150"
+      alt="Foto"
+      width={150}
+      height={150}
+      format="webp"
+    />
+    <Icon pack="mdi" name="account" class="w-10" />
+    <div>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt cumque
+      similique omnis illo sequi molestias dicta sapiente animi est deserunt a
+      ad at, sit ducimus tenetur iure laborum commodi voluptates?
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illum
+        aut reiciendis consectetur distinctio. Esse aliquam laborum voluptate
+        cum, eum animi facilis distinctio quasi veritatis qui sunt assumenda aut
+        rem!
+      </p>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  p {
+    color: red;
+    &:hover {
+      color: purple;
+    }
+  }
+</style>
