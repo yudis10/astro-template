@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --il-red: 358 72% 45%;
+  }
+}
+
+@layer components {
+  .full-bleed {
+    box-shadow: 0 0 0 100vmax var(--bleed-color, #000);
+    clip-path: inset(0 -100vmax);
+  }
+}

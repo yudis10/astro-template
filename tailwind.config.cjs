@@ -4,12 +4,18 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
-        raleway: ["Raleway", "sans-serif"],
-        dmsans: ["DM Sans", "sans-serif"],
-        sans: ["DM Sans", ...defaultTheme.fontFamily.sans],
+        sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        custom: {
+          red: "hsl(var(--il-red) / <alpha-value>)",
+        },
       },
     },
   },
