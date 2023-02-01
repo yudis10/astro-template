@@ -18,10 +18,10 @@ cd my-website-name
 npm install
 ```
 
-### 4. Run Eleventy
+### 4. Run Astro
 
 ```
-npm run start
+npm run dev
 ```
 
 ## Update All Packages to the Latest Version
