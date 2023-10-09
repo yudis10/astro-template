@@ -1,8 +1,6 @@
-import { defineConfig } from "astro/config";
-import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
-
-import node from "@astrojs/node";
+import sitemap from "@astrojs/sitemap"
+import tailwind from "@astrojs/tailwind"
+import { defineConfig } from "astro/config"
 
 // https://astro.build/config
 export default defineConfig({
@@ -28,9 +26,5 @@ export default defineConfig({
     inlineStylesheets: "never",
   },
   compressHTML: false,
-  output: "server",
-  outDir: "./preview",
-  adapter: node({
-    mode: "standalone",
-  }),
-});
+  output: "static",
+})
