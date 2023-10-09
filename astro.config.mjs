@@ -1,26 +1,36 @@
 import { defineConfig } from "astro/config";
-import image from "@astrojs/image";
+import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
-import alpinejs from "@astrojs/alpinejs";
+
+import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://online.detik.com",
+  // Change to your site URL
+  vite: {
+    build: {
+      cssCodeSplit: false,
+    },
+  },
   integrations: [
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
+    sitemap(),
     tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
+      applyBaseStyles: false,
     }),
-    alpinejs(),
   ],
-  base: "/",
+  base: "/design/static/starter-project/preview/",
+  // Change to your base path
   build: {
     format: "file",
-    assets: "_astro",
+    assets: "_starter-project",
+    // Change to your project name
+    inlineStylesheets: "never",
   },
-  output: "static",
+  compressHTML: false,
+  output: "server",
   outDir: "./preview",
+  adapter: node({
+    mode: "standalone",
+  }),
 });

@@ -1,39 +1,22 @@
-## Getting Started
-
-### 1. Clone this repository
+# Astro Starter Kit: Trans Digital Media
 
 ```
-git clone [git url] my-website-name
+npm create astro@latest
 ```
 
-### 2. Navigate to the directory
+Any static assets, like images, can be placed in the `public/` directory.
 
-```
-cd my-website-name
-```
+## 🧞 Commands
 
-### 3. Install the dependencies
+All commands are run from the root of the project, from a terminal:
 
-```
-npm install
-```
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:3000`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-### 4. Run Astro
-
-```
-npm run dev
-```
-
-## Update All Packages to the Latest Version
-
-```
-sudo npm install -g npm-check-updates
-```
-
-```
-sudo ncu -u
-```
-
-```
-npm install
-```
+sugoooi

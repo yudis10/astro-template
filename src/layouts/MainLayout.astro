@@ -1,22 +1,25 @@
 ---
-import "../styles/fonts.css";
-import "../styles/global.css";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
+import BaseHead from "@/components/BaseHead.astro";
+import Header from "@/components/Header.astro";
+import { Fragment } from "astro/runtime/server/index.js";
 
 interface Props {
-  pageTitle?: string;
+  title?: string;
+  description?: string;
 }
-const { pageTitle = Astro } = Astro.props;
+
+const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="id" class="scroll-smooth">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <BaseHead title={title} description={description} />
   </head>
-  <body>
-    <slot />
+  <body class="flex min-h-screen flex-col bg-white">
+    <Header />
+    <main class="mx-auto w-full max-w-6xl flex-1 pt-5">
+      <slot />
+    </main>
   </body>
 </html>

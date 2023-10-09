@@ -1,27 +1,11 @@
-/** @type {import('tailwindcss').Config} */
-const defaultTheme = require("tailwindcss/defaultTheme");
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-  theme: {
-    container: {
-      center: true,
-    },
-    extend: {
-      fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
-        sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
-      },
-      colors: {
-        custom: {
-          red: "hsl(var(--il-red) / <alpha-value>)",
-        },
-      },
-    },
-  },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/line-clamp"),
-  ],
-};
+	presets: [require('./tailwind-preset.cjs')],
+	 // Customizations specific to this project would go here
+	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	theme: {
+		extend: {},
+	},
+	plugins: []
+}
