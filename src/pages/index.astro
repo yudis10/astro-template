@@ -12,9 +12,8 @@ import NavLink from "@/components/NavLink.astro"
     <Grid className="mb-8" sidebarClassName="gap-4">
         <Heading size="h3" tagType="h2">Test heading</Heading>
         <div class="flex items-end gap-2">
-            <NavLink href={BASE_URL}>Home</NavLink>
-            <ButtonOrLink as="a" href="#" variant={"default"} size={"xs"}>xs Default</ButtonOrLink>
-            <ButtonOrLink as="button" type="button" variant={"dark"} size={"sm"}>sm Dark</ButtonOrLink>
+            <Button as="a" href="#" variant={"default"} size={"xs"}>xs Default</Button>
+            <Button as="button" type="button" variant={"dark"} size={"sm"}>sm Dark</Button>
             <!-- Open the modal using ID.showModal() method -->
             <button class="btn" onclick="my_modal_2.showModal()">open modal</button>
             <dialog id="my_modal_2" class="modal">
