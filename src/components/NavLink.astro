@@ -1,15 +1,17 @@
 ---
-import { Fragment } from "astro/dist/runtime/server";
-import type { HTMLAttributes } from "astro/types";
+import type { HTMLAttributes } from "astro/types"
 
-type Props = HTMLAttributes<"a">;
+import { cn } from "@/lib/utils"
+import { Fragment } from "astro/dist/runtime/server"
 
-const { href, class: className, ...props } = Astro.props;
+type Props = HTMLAttributes<"a">
 
-const { pathname } = Astro.url;
-const isActive = href === pathname || href === pathname.replace(/\/$/, "");
+const { href, class: className, ...props } = Astro.props
+
+const { pathname } = Astro.url
+const isActive = href === pathname || href === pathname.replace(/\/$/, "")
 ---
 
-<a href={href} class:list={[className, { active: isActive }]} {...props}>
-	<slot />
+<a href={href} class={cn([className, { "text-fuchsia-500 underline": isActive }])} {...props}>
+    <slot />
 </a>
