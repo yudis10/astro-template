@@ -1,14 +1,18 @@
 ---
+import { BASE_URL } from "@/consts"
+
 import MainLayout from "@/layouts/MainLayout.astro"
 import Button from "@/components/ui/Button.astro"
 import Grid from "@/components/ui/Grid.astro"
 import Heading from "@/components/ui/Heading.astro"
+import NavLink from "@/components/NavLink.astro"
 ---
 
 <MainLayout title="Detikcom Project." description="Welcome to Detikcom Project!">
     <Grid className="mb-8" sidebarClassName="gap-4">
         <Heading size="h3" tagType="h2">Test heading</Heading>
         <div class="flex items-end gap-2">
+            <NavLink href={BASE_URL}>Home</NavLink>
             <Button as="a" href="#" variant={"default"} size={"xs"}>xs Default</Button>
             <Button as="button" type="button" variant={"dark"} size={"sm"}>sm Dark</Button>
             <!-- Open the modal using ID.showModal() method -->
