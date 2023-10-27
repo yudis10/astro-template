@@ -4,7 +4,7 @@ import { defineConfig } from "astro/config"
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://online.detik.com",
+  site: "https://yudis10.github.io",
   // Change to your site URL
   vite: {
     build: {
@@ -17,7 +17,7 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
-  base: "/design/static/starter-project/preview/",
+  base: "/starter-project/",
   // Change to your base path
   build: {
     format: "file",
@@ -25,6 +25,7 @@ export default defineConfig({
     // Change to your project name
     inlineStylesheets: "never",
   },
-  compressHTML: false,
+  compressHTML: true,
   output: "static",
+  outDir: "./dist",
 })

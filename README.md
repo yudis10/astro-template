@@ -1,4 +1,4 @@
-# Astro Starter Kit: Trans Digital Media
+# Astro Starter Kit
 
 ```
 npm create astro@latest
