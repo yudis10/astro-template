@@ -2,7 +2,7 @@
 import { BASE_URL } from "@/consts"
 
 import MainLayout from "@/layouts/MainLayout.astro"
-import Button from "@/components/ui/Button.astro"
+import ButtonOrLink from "@/components/ui/ButtonOrLink.astro"
 import Grid from "@/components/ui/Grid.astro"
 import Heading from "@/components/ui/Heading.astro"
 import NavLink from "@/components/NavLink.astro"
@@ -13,8 +13,8 @@ import NavLink from "@/components/NavLink.astro"
         <Heading size="h3" tagType="h2">Test heading</Heading>
         <div class="flex items-end gap-2">
             <NavLink href={BASE_URL}>Home</NavLink>
-            <Button as="a" href="#" variant={"default"} size={"xs"}>xs Default</Button>
-            <Button as="button" type="button" variant={"dark"} size={"sm"}>sm Dark</Button>
+            <ButtonOrLink as="a" href="#" variant={"default"} size={"xs"}>xs Default</ButtonOrLink>
+            <ButtonOrLink as="button" type="button" variant={"dark"} size={"sm"}>sm Dark</ButtonOrLink>
             <!-- Open the modal using ID.showModal() method -->
             <button class="btn" onclick="my_modal_2.showModal()">open modal</button>
             <dialog id="my_modal_2" class="modal">
